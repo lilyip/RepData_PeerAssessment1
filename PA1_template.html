@@ -257,7 +257,7 @@ head(totalSteps)
 <p>###2. Histogram of steps taken per day</p>
 
 <pre><code class="r">ggplot(totalSteps, aes(x = date, y = total)) +  
-    geom_bar(stat = &quot;identity&quot;, fill = &#39;blue&#39;) +
+    geom_histogram(stat = &quot;identity&quot;, fill = &#39;blue&#39;) +
     labs(title = &quot;Histogram of Total Number of Steps Taken Each Day&quot;, x = &quot;Date&quot;, y = &quot;Total number of steps&quot;)
 </code></pre>
 
@@ -331,7 +331,7 @@ for (i in 1:nrow(data2)) {
     summarise(total = sum(steps))
 
 ggplot(newTotalSteps, aes(x = date, y = total )) +
-    geom_bar(stat = &quot;identity&quot;, fill = &#39;blue&#39;) +
+    geom_histogram(stat = &quot;identity&quot;, fill = &#39;blue&#39;) +
     labs(title = &quot;Histogram of Total Number of Steps Taken Each Day with new data set&quot;, x = &quot;Date&quot;, y = &quot;Total number of steps&quot;)
 </code></pre>
 

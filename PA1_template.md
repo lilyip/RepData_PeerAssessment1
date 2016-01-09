@@ -70,7 +70,7 @@ head(totalSteps)
 
 ```r
 ggplot(totalSteps, aes(x = date, y = total)) +  
-    geom_bar(stat = "identity", fill = 'blue') +
+    geom_histogram(stat = "identity", fill = 'blue') +
     labs(title = "Histogram of Total Number of Steps Taken Each Day", x = "Date", y = "Total number of steps")
 ```
 
@@ -147,7 +147,7 @@ newTotalSteps <- data2 %>%
     summarise(total = sum(steps))
 
 ggplot(newTotalSteps, aes(x = date, y = total )) +
-    geom_bar(stat = "identity", fill = 'blue') +
+    geom_histogram(stat = "identity", fill = 'blue') +
     labs(title = "Histogram of Total Number of Steps Taken Each Day with new data set", x = "Date", y = "Total number of steps")
 ```
 
